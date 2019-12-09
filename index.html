@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <div class="ceiling-line"></div>
         <header>
-<!--
-            <div class="b-header-info">
-                <div class="b-header-info__logoAndSlogan"></div>
-                <div class="b-header-info__social"></div>
-                <div class="b-header-info__auth"></div>
-            </div>
--->
-           <!--
-            <div class="b-header-logoAndSlogan">
-                <div class="b-header-logoAndSlogan__logo">CONCOMITANT</div>
-                <div class="b-header-logoAndSlogan__slogan">Free PSD Website Template</div>
-            </div>
-            <div class="b-headersocialAndAuth">
-                <div class="b-headersocialAndAuth__social-block">
+            <div class="b-header-info clearfix">
+                <div class="b-header-info__logoAndSlogan">
+                    <div class="b-header-info__logo">CONCOMITANT</div>
+                    <div class="b-header-info__slogan">Free PSD Website Template</div>
+                </div>
+                <div class="b-header-info__social b-social">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><i class="b-social__icon fab fa-linkedin"></i></li>
+                        <li><i class="b-social__icon fa fa-twitter"></i></li>
+                        <li><i class="b-social__icon fa fa-pinterest"></i></li>
+                        <li><i class="b-social__icon fa fa-google-plus"></i></li>
+                        <li><i class="b-social__icon fa fa-rss"></i></li>
                     </ul>
                 </div>
-                <div class="b-headersocialAndAuth__auth-block"></div>
+                <div class="b-header-info__authAndNav b-authAndNav">
+                    <a class="b-authAndNav__item" href="">Sign Up</a>
+                    <span class="b-authAndNav__delimiter">|</span>
+                    <a class="b-authAndNav__item" href="">Login</a>
+                    <span class="b-authAndNav__delimiter">|</span>
+                    <a class="b-authAndNav__item" href="">RSS Feeds</a>
+                    <span class="b-authAndNav__delimiter">|</span>
+                    <a class="b-authAndNav__item" href="">Archived News</a>
+                </div>
             </div>
--->
             <div class="b-header-navAndSeach">
                 <div class="b-header-navAndSeach__container">
                     <div class="b-header-navAndSeach__nav">
@@ -46,7 +50,7 @@
                         </ul>
                     </div>
                     <form class="b-header-navAndSeach__form" action="#">
-                        <input class="b-header-navAndSeach__seach-input" type="seach" placeholder="Search Our Website...">
+                        <input class="b-header-navAndSeach__seach-input" type="search" placeholder="Search Our Website...">
                         <button class="b-header-navAndSeach__seach-button" type="submit">SEACH</button>
                     </form>
                 </div>
@@ -54,82 +58,81 @@
         </header>
         <main>
             <section class="b-slider">
-                <div class="b-slider__img-container">
-                    <img class="b-slider__img" src="https://placehold.it/880x360" alt="slider">
+                <div class="b-slider__img-container carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="2000"> <img src="./img/slider/slide1.jpg" class="d-block w-100" alt="sliderImg"> </div>
+                        <div class="carousel-item" data-interval="2000"> <img src="./img/slider/slide2.jpg" class="d-block w-100" alt="sliderImg"> </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
                 </div>
-                <div class="b-slider__nav">
-                    <a class="b-slider__link b-slider__link_left-arrow" href="#">
-                        <img src="./img/Left_arrow.png" alt="">
-                    </a>
-                    <a class="b-slider__link" href="#"></a>
-                    <a class="b-slider__link" href="#"></a>
-                    <a class="b-slider__link" href="#"></a>
-                    <a class="b-slider__link" href="#"></a>
-                    <a class="b-slider__link" href="#"></a>
-                    <a class="b-slider__link b-slider__link_right-arrow" href="#">
-                        <img src="./img/Right_arrow.png" alt="">
-                    </a>
                 </div>
+                
             </section>
-            <section class="b-features">
-                <div class="b-features__block">
+            <section class="b-features row">
+                <div class="col-sm-6 col-md-3 b-features__block">
                     <img class="b-features-img" src="./img/features_block-img-1.png" alt="features_block-img">
                     <h4 class="b-features__h4">Vivamuslibero Augue</h4>
                     <p class="b-features__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
                 </div>
-                <div class="b-features__block">
+                <div class="col-sm-6 col-md-3 b-features__block">
                     <img class="b-features-img" src="./img/features_block-img-2.png" alt="features_block-img">
                     <h4 class="b-features__h4">Vivamuslibero Augue</h4>
                     <p class="b-features__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
                 </div>
-                <div class="b-features__block">
+                <div class="col-sm-6 col-md-3 b-features__block">
                     <img class="b-features-img" src="./img/features_block-img-3.png" alt="features_block-img">
                     <h4 class="b-features__h4">Vivamuslibero Augue</h4>
                     <p class="b-features__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
                 </div>
-                <div class="b-features__block">
+                <div class="col-sm-6 col-md-3 b-features__block">
                     <img class="b-features-img" src="./img/features_block-img-4.png" alt="features_block-img">
                     <h4 class="b-features__h4">Vivamuslibero Augue</h4>
                     <p class="b-features__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.</p>
                 </div>
             </section>
             <div class="b-divider"></div>
-            <section class="b-project">
-                <div class="b-project__block">
+            <section class="b-project row">
+                <div class="b-project__block col-md-6 col-lg-3">
                     <div class="b-project__img-block">
-                        <img src="https://placehold.it/200x130" alt="200x130">
+                        <img class="b-project__img" src="./img/projects/project1.jpg" alt="200x130">
                     </div>
                     <h6 class="b-project__h6">Project Title</h6>
                     <p class="b-project__p">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
                     <a class="b-project__a" href="#">View Details »</a>
                 </div>
-                <div class="b-project__block">
+                <div class="b-project__block col-md-6 col-lg-3">
                     <div class="b-project__img-block">
-                        <img src="https://placehold.it/200x130" alt="200x130">
+                        <img class="b-project__img" src="./img/projects/project2.jpg" alt="200x130">
                     </div>
                     <h6 class="b-project__h6">Project Title</h6>
                     <p class="b-project__p">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
                     <a class="b-project__a" href="#">View Details »</a>
                 </div>
-                <div class="b-project__block">
+                <div class="b-project__block col-md-6 col-lg-3">
                     <div class="b-project__img-block">
-                        <img src="https://placehold.it/200x130" alt="200x130">
+                        <img class="b-project__img" src="./img/projects/project3.jpg" alt="200x130">
                     </div>
                     <h6 class="b-project__h6">Project Title</h6>
                     <p class="b-project__p">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
                     <a class="b-project__a" href="#">View Details »</a>
                 </div>
-                <div class="b-project__block">
+                <div class="b-project__block col-md-6 col-lg-3">
                     <div class="b-project__img-block">
-                        <img src="https://placehold.it/200x130" alt="200x130">
+                        <img class="b-project__img" src="./img/projects/project4.jpg" alt="200x130">
                     </div>
                     <h6 class="b-project__h6">Project Title</h6>
                     <p class="b-project__p">Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
                     <a class="b-project__a" href="#">View Details »</a>
                 </div>
             </section>
-            <section class="b-contacts">
-                <div class="b-contacts__block b-contacts__block_contactDetals">
+            <section class="b-contacts row">
+                <div class="b-contacts__block b-contacts__block_contactDetals col-md-6 col-lg-3">
                     <h6 class="b-contacts__block_h6">CONTACT DETAILS</h6>
                     <p class="b-contacts__block_p ">Convallisijusto vestas mus pellentum aenean sapibulum in aliquam volut pat integest nulla. </p>
                     <p class="b-contacts__block_p b-contacts__block_p_contactDetals">Tel: xxxxx xxxxxxxxxx 
@@ -137,21 +140,21 @@
                         <br>Email: contact@mydomain.com
                     </p>
                 </div>
-                <div class="b-contacts__block b-contacts__block_quickLinks">
+                <div class="b-contacts__block b-contacts__block_quickLinks col-md-6 col-lg-3">
                     <h6 class="b-contacts__block_h6">QUICK LINKS</h6>
                     <a class="b-contacts__a" href="#">Link Text Here</a>
                     <a class="b-contacts__a" href="#">Link Text Here</a>
                     <a class="b-contacts__a" href="#">Link Text Here</a>
                     <a class="b-contacts__a" href="#">Link Text Here</a>
                 </div>
-                <div class="b-contacts__block b-contacts__block_fromTheBlog">
+                <div class="b-contacts__block b-contacts__block_fromTheBlog col-md-6 col-lg-3">
                     <h6 class="b-contacts__block_h6">FROM THE BLOG</h6>
                     <p class="b-contacts__block_p_bold">Blog Post Title</p>
                     <p class="b-contacts__block_p">Posted by Admin on 00.00.0000</p>
                     <p class="b-contacts__block_p">Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed facilispede estibulum.</p>
                     <a class="b-contacts__block_a" href="#">Read More »</a>
                 </div>
-                <div class="b-contacts__block b-contacts__block_grabOurNewsletter">
+                <div class="b-contacts__block b-contacts__block_grabOurNewsletter col-md-6 col-lg-3">
                     <h6 class="b-contacts__block_h6">GRAB OUR NEWSLETTER</h6>
                     <form class="b-contacts__form" action="#">
                         <input class="b-contacts__input-text" placeholder="Name" type="text">
@@ -165,6 +168,9 @@
             <div class="b-footer_textLeft">Copyright © 2013 - All Rights Reserved - Domain Name</div>
             <div class="b-footer_textRight">Template by OS Templates</div>
         </footer>
-    </div>        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>      
 </body>
 </html>
